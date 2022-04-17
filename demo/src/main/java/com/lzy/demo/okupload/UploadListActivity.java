@@ -22,6 +22,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import butterknife.BindView;
 import com.lzy.demo.R;
 import com.lzy.demo.base.BaseActivity;
 import com.lzy.demo.utils.GlideImageLoader;
@@ -34,7 +35,6 @@ import com.lzy.okserver.upload.UploadTask;
 
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
@@ -48,8 +48,8 @@ import butterknife.OnClick;
  */
 public class UploadListActivity extends BaseActivity implements XExecutor.OnAllTaskEndListener {
 
-    @Bind(R.id.toolbar) Toolbar toolbar;
-    @Bind(R.id.recyclerView) RecyclerView recyclerView;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
 
     private UploadAdapter adapter;
     private OkUpload okUpload;

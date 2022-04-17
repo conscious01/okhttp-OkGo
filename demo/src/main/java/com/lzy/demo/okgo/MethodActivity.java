@@ -25,6 +25,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import butterknife.BindView;
 import com.lzy.demo.R;
 import com.lzy.demo.base.BaseDetailActivity;
 import com.lzy.demo.callback.DialogCallback;
@@ -36,7 +37,6 @@ import com.lzy.demo.utils.Urls;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -50,7 +50,7 @@ import butterknife.ButterKnife;
  */
 public class MethodActivity extends BaseDetailActivity implements AdapterView.OnItemClickListener {
 
-    @Bind(R.id.gridView) GridView gridView;
+    @BindView(R.id.gridView) GridView gridView;
 
     private String[] methods = {"GET", "HEAD", "OPTIONS", "POST", "PUT", "DELETE", "PATCH", "TRACE"};
 

@@ -27,6 +27,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.BindView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lzy.demo.R;
 import com.lzy.demo.base.BaseFragment;
@@ -39,7 +40,6 @@ import com.lzy.okgo.model.Response;
 
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -55,8 +55,8 @@ public class NewsTabFragment extends BaseFragment implements SwipeRefreshLayout.
 
     private static final int PAGE_SIZE = 20;
 
-    @Bind(R.id.recyclerView) RecyclerView recyclerView;
-    @Bind(R.id.refreshLayout) SwipeRefreshLayout refreshLayout;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
+    @BindView(R.id.refreshLayout) SwipeRefreshLayout refreshLayout;
 
     private Context context;
     private int currentPage = 2;

@@ -25,6 +25,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Pair;
 import android.view.View;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import com.lzy.demo.base.BaseActivity;
 import com.lzy.demo.okdownload.OkDownloadFragment;
 import com.lzy.demo.okgo.OkGoFragment;
@@ -35,7 +37,6 @@ import com.lzy.demo.okupload.OkUploadFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
@@ -49,9 +50,9 @@ import butterknife.OnClick;
  */
 public class MainActivity extends BaseActivity {
 
-    @Bind(R.id.toolbar) Toolbar toolbar;
-    @Bind(R.id.viewPager) ViewPager viewPager;
-    @Bind(R.id.tab) TabLayout tab;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.viewPager) ViewPager viewPager;
+    @BindView(R.id.tab) TabLayout tab;
 
     private List<Pair<String, Fragment>> items;
 
@@ -59,6 +60,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         initToolBar(toolbar, false, "");
 
         items = new ArrayList<>();

@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import butterknife.BindView;
 import com.lzy.demo.R;
 import com.lzy.demo.base.BaseActivity;
 import com.lzy.demo.callback.JsonCallback;
@@ -32,7 +33,6 @@ import com.lzy.okgo.model.Response;
 
 import org.json.JSONObject;
 
-import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
@@ -46,8 +46,8 @@ import butterknife.OnClick;
  */
 public class TestActivity extends BaseActivity {
 
-    @Bind(R.id.image) ImageView imageView;
-    @Bind(R.id.edit) EditText editText;
+    @BindView(R.id.image) ImageView imageView;
+    @BindView(R.id.edit) EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
